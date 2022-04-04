@@ -23,6 +23,7 @@
 
 package com.iluwatar.observer;
 
+import ch.qos.logback.classic.Logger;
 import com.iluwatar.observer.generic.GHobbits;
 import com.iluwatar.observer.generic.GOrcs;
 import com.iluwatar.observer.generic.GWeather;
@@ -59,6 +60,7 @@ public class App {
     weather.timePasses();
 
     // Generic observer inspired by Java Generics and Collections by Naftalin & Wadler
+
     LOGGER.info("--Running generic version--");
     var genericWeather = new GWeather();
     genericWeather.addObserver(new GOrcs());
